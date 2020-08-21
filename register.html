@@ -1,0 +1,38 @@
+<html>
+<link href="login.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+     <img src="login.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="register.php" method="POST">
+	  <input type="text" id="login" class="fadeIn second" name="name" placeholder="name">
+	  <!--<span name=''><?php echo "* "?></span>-->
+      <input type="text" id="login" class="fadeIn second" name="userID" placeholder="user ID">
+	  <!--<span name=''><?php echo "* "?></span>-->
+	  <input type="password" id="password" class="fadeIn third" name="pass1" placeholder="Enter password">
+      <!--<span name=''><?php echo "* "?></span>-->
+	  <input type="password" id="password" class="fadeIn third" name="pass2" placeholder="Re enter password">
+      <!--<span name=''><?php echo "* "?></span>-->
+	  <input type="submit" class="fadeIn fourth" value="Register">
+	  <!--<span name=''><?php echo "* "?></span>-->
+	  <!--<span name=''><?php echo "* "?></span>-->
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">Note : Make sure that your user ID is unique
+     <!-- <a class="underlineHover" href="#">Register here</a> -->
+    </div>
+
+  </div>
+</div>
