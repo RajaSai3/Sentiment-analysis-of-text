@@ -4,13 +4,23 @@
 	$servername = "localhost";
 	$username = "root";
 	$password = "";
-	echo "<center><h2>Welcome ".$_SESSION['Name'].".These are your previous transactions</h2></center>";
+	echo "<h1 style='text-align:center'>Welcome ".$_SESSION['Name']."</h1>";
+	print "<h3 style='text-align:center'>These are your previous queries and their results.</h3>";
 	$con=new mysqli($servername,$username,$password,"sentiment");
 		
 	$sql="select * from transaction where UserID='$uid'";
 	$result=$con->query($sql);
 	echo "<div class='container table-responsive'><table class='table table-striped table-bordered table-hover table-condensed'>";
-	echo "<tr><th>Transaction ID</th><th>User ID</th><th>Sentence</th><th>Negative</th><th>Neutral</th><th>Positive</th><th>Compound</th><th>Date</th></tr>";
+	echo "<tr>
+			<th class='text-center'>Transaction ID</th>
+			<th class='text-center'>User ID</th>
+			<th class='text-center'>Sentence</th>
+			<th class='text-center'>Negative</th>
+			<th class='text-center'>Neutral</th>
+			<th class='text-center'>Positive</th>
+			<th class='text-center'>Compound</th>
+			<th class='text-center'>Date</th>
+		</tr>";
 	
 		$counter=0;
 	while($row=$result->fetch_assoc())
@@ -22,7 +32,7 @@
 			{
 				echo "<tr>";
 			}
-			echo "<td>".$row1."</td>";
+			echo "<td class='text-center'>".$row1."</td>";
 			if($counter%8==7)
 			{
 				echo "</tr>";
@@ -40,10 +50,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <form action="logout.php" method="POST">
 <br><br><br>
-<center>
-<a href="hello.php"><button type="button" value="Previous Page">Previous Page</button></a>
-<input type="Submit" value="LogOut"></input>
-</center>
+<div class="text-center">
+<a href="sentiment_analyzer.php"><button type="button" value="Previous Page" class="btn btn-light">Previous Page</button></a>
+<input type="Submit" value="LogOut" class="btn btn-danger"></input>
+</div>
 </form>
 
 </html>

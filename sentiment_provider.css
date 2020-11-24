@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.nav{
+    width:100%;
+    background-color: black;
+    color:white;
+    margin-top: 0;
+}
+
+.nav-heading{
+    margin-left: 2%;
+}
+
+.first-section{
+    margin-top: 1.5rem;
+}
+

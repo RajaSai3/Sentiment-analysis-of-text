@@ -7,7 +7,7 @@ $flag=0;
 echo "<div class='container alert alert-danger message'>";
 if(isset($userid) and $userid=='')
 {
-	echo "<span><strong>Name field is empty</strong></span><br>";
+	echo "<span><strong>User ID field is empty</strong></span><br>";
 	$flag=1;
 }
 
@@ -36,7 +36,7 @@ if($flag==0)
 	else
 	{
 		$_SESSION['Name']=$row["Name"];
-		header( 'Location:hello.php' ) ;
+		header( 'Location:sentiment_analyzer.php' ) ;
 	}
 	$con->close();
 }
